@@ -147,6 +147,7 @@ endif ( )
 
 set ( XLUA_CORE
     i64lib.c
+    perflib.c
     xlua.c
 )
 
