@@ -26,6 +26,7 @@
 #define IS_LITTLE_ENDIAN
 #endif
 
+
 /*
 ** stdcall C function support
 */
