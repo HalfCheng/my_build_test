@@ -19,7 +19,7 @@ if [ ! -e $ISDKP/strip ]; then
   sudo cp /usr/bin/strip $ISDKP
 fi
 
-cd luajit-2.1.0b2
+cd luajit-2.1.0b3
 
 XCODEVER=`xcodebuild -version|head -n 1|sed 's/Xcode \([0-9]*\)/\1/g'`
 ISOLD_XCODEVER=`echo "$XCODEVER < 10" | bc`
