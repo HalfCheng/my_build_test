@@ -37,6 +37,7 @@ jobs:
       - name: Build
         run: |
           cd build
+          sudo chmod 777 ./make_linux64_luajit.sh
           ./make_linux64_luajit.sh
           
       - name: UploadJit
@@ -52,6 +53,7 @@ jobs:
       - name: Build
         run: |
           cd build
+          sudo chmod 777 ./make_ios_luajit.sh
           ./make_ios_luajit.sh
           
       - name: UploadJit
@@ -67,6 +69,7 @@ jobs:
       - name: Build
         run: |
           cd build
+          sudo chmod 777 ./make_osx_luajit.sh
           ./make_osx_luajit.sh
           
       - name: UploadJit
