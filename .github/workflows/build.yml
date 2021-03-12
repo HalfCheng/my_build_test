@@ -2,9 +2,9 @@ name: build
  
 on: 
   push:
-    paths: 
-      - build/**
-      - .github/workflows/build.yml
+#     paths: 
+#       - build/**
+#       - .github/workflows/build.yml
 
 jobs:
   android:
