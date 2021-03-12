@@ -27,11 +27,24 @@ jobs:
           sudo chmod 777 ./make_android_lua53.sh
           sudo chmod 777 ./make_android_luajit_arm64.sh
           
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          path: ./build/plugin_lua54/**/*
+          name: plugin_lua54
+          
+      - name: Upload53
+        uses: actions/upload-artifact@v2
+        with:
+          path: ./build/plugin_lua53/**/*
+          name: plugin_lua53   
+          
       - name: UploadJit
         uses: actions/upload-artifact@v2
         with:
           path: ./build/plugin_luajit/**/*
           name: plugin_luajit
+          
   linux:
     runs-on: ubuntu-latest
     steps:
@@ -48,11 +61,13 @@ jobs:
         with:
           path: ./build/plugin_lua54/**/*
           name: plugin_lua54
+          
       - name: Upload53
         uses: actions/upload-artifact@v2
         with:
           path: ./build/plugin_lua53/**/*
           name: plugin_lua53   
+          
       - name: UploadJit
         uses: actions/upload-artifact@v2
         with:
@@ -75,11 +90,13 @@ jobs:
         with:
           path: ./build/plugin_lua54/**/*
           name: plugin_lua54
+          
       - name: Upload53
         uses: actions/upload-artifact@v2
         with:
           path: ./build/plugin_lua53/**/*
           name: plugin_lua53   
+          
       - name: UploadJit
         uses: actions/upload-artifact@v2
         with:
