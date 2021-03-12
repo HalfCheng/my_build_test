@@ -24,8 +24,11 @@ jobs:
           cd build
           sudo apt install gcc-multilib
           sudo chmod 777 ./make_android_lua54.sh
+          ./make_android_lua54.sh
           sudo chmod 777 ./make_android_lua53.sh
+          ./make_android_lua53.sh
           sudo chmod 777 ./make_android_luajit_arm64.sh
+          ./make_android_luajit_arm64.sh
           
       - name: Upload
         uses: actions/upload-artifact@v2
@@ -53,8 +56,11 @@ jobs:
         run: |
           cd build
           sudo chmod 777 ./make_linux_lua54.sh
+          ./make_linux_lua54.sh
           sudo chmod 777 ./make_linux64_lua53.sh
+          ./make_linux64_lua53.sh
           sudo chmod 777 ./make_linux64_luajit.sh
+          ./make_linux64_luajit.sh
           
       - name: Upload
         uses: actions/upload-artifact@v2
@@ -82,8 +88,11 @@ jobs:
         run: |
           cd build
           sudo chmod 777 ./make_ios_lua54.sh
+          ./make_ios_lua54.sh
           sudo chmod 777 ./make_ios_lua53.sh
+          ./make_ios_lua53.sh
           sudo chmod 777 ./make_ios_luajit.sh
+          ./make_ios_luajit.sh
           
       - name: Upload
         uses: actions/upload-artifact@v2
@@ -111,8 +120,11 @@ jobs:
         run: |
           cd build
           sudo chmod 777 ./make_osx_lua54.sh
+          ./make_osx_lua54.sh
           sudo chmod 777 ./make_osx_lua53.sh
+          ./make_osx_lua53.sh
           sudo chmod 777 ./make_osx_luajit.sh
+          ./make_osx_luajit.sh
           
       - name: Upload
         uses: actions/upload-artifact@v2
