@@ -148,6 +148,7 @@ endif ( )
 set ( XLUA_CORE
     i64lib.c
     perflib.c
+    snapshot.c
     xlua.c
 )
 
