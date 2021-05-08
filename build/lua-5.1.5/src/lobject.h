@@ -234,7 +234,7 @@ typedef struct Proto {
   Instruction *code;
   struct Proto **p;  /* functions defined inside the function */
   //int *lineinfo;  /* map from opcodes to source lines */	
-  short *lineinfo16;  /* map from opcodes to source lines */
+  short *lineinfo;  /* map from opcodes to source lines */
   struct LocVar *locvars;  /* information about local variables */
   TString **upvalues;  /* upvalue names */
   TString  *source;
