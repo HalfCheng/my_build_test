@@ -293,7 +293,7 @@ GCObject*next;lu_byte tt;lu_byte marked;
 TValue*k;
 Instruction*code;
 struct Proto**p;
-int*lineinfo;
+short*lineinfo;
 struct LocVar*locvars;
 TString**upvalues;
 TString*source;
