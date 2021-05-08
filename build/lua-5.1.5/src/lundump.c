@@ -138,9 +138,17 @@ static void LoadDebug(LoadState* S, Proto* f)
 {
  int i,n;
  n=LoadInt(S);
- f->lineinfo=luaM_newvector(S->L,n,int);
- f->sizelineinfo=n;
- LoadVector(S,f->lineinfo,n,sizeof(int));
+ //f->lineinfo=luaM_newvector(S->L,n,int);
+ //f->sizelineinfo=n;
+ //LoadVector(S,f->lineinfo,n,sizeof(int));
+	
+	f->lineinfo16=luaM_newvector(S->L,n,short);
+	f->sizelineinfo=n;
+	for(int i = 0; i < n; i++)
+	{
+		f->lineinfo16[i] = LoadInt(S);
+	}
+	
  n=LoadInt(S);
  f->locvars=luaM_newvector(S->L,n,LocVar);
  f->sizelocvars=n;
